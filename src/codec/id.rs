@@ -510,6 +510,24 @@ pub enum Id {
     ATRAC9,
     #[cfg(feature = "ffmpeg4")]
     TTML,
+    #[cfg(feature = "ffmpeg4")]
+    HYMT,
+    #[cfg(feature = "ffmpeg4")]
+    ARBC,
+    #[cfg(feature = "ffmpeg4")]
+    AGM,
+    #[cfg(feature = "ffmpeg4")]
+    LSCR,
+    #[cfg(feature = "ffmpeg4")]
+    VP4,
+    #[cfg(feature = "ffmpeg4")]
+    IMM5,
+    #[cfg(feature = "ffmpeg4")]
+    ADPCM_AGM,
+    #[cfg(feature = "ffmpeg4")]
+    HCOM,
+    #[cfg(feature = "ffmpeg4")]
+    ARIB_CAPTION,
 }
 
 impl Id {
@@ -1022,6 +1040,24 @@ impl From<AVCodecID> for Id {
             AV_CODEC_ID_ATRAC9 => Id::ATRAC9,
             #[cfg(feature = "ffmpeg4")]
             AV_CODEC_ID_TTML => Id::TTML,
+            #[cfg(feature = "ffmpeg4")]
+            AV_CODEC_ID_HYMT => Id::HYMT,
+            #[cfg(feature = "ffmpeg4")]
+            AV_CODEC_ID_ARBC => Id::ARBC,
+            #[cfg(feature = "ffmpeg4")]
+            AV_CODEC_ID_AGM => Id::AGM,
+            #[cfg(feature = "ffmpeg4")]
+            AV_CODEC_ID_LSCR => Id::LSCR,
+            #[cfg(feature = "ffmpeg4")]
+            AV_CODEC_ID_VP4 => Id::VP4,
+            #[cfg(feature = "ffmpeg4")]
+            AV_CODEC_ID_IMM5 => Id::IMM5,
+            #[cfg(feature = "ffmpeg4")]
+            AV_CODEC_ID_ADPCM_AGM => Id::ADPCM_AGM,
+            #[cfg(feature = "ffmpeg4")]
+            AV_CODEC_ID_HCOM => Id::HCOM,
+            #[cfg(feature = "ffmpeg4")]
+            AV_CODEC_ID_ARIB_CAPTION => Id::ARIB_CAPTION,
         }
     }
 }
@@ -1531,6 +1567,24 @@ impl Into<AVCodecID> for Id {
             Id::ATRAC9 => AV_CODEC_ID_ATRAC9,
             #[cfg(feature = "ffmpeg4")]
             Id::TTML => AV_CODEC_ID_TTML,
+            #[cfg(feature = "ffmpeg4")]
+            Id::HYMT => AV_CODEC_ID_HYMT,
+            #[cfg(feature = "ffmpeg4")]
+            Id::ARBC => AV_CODEC_ID_ARBC,
+            #[cfg(feature = "ffmpeg4")]
+            Id::AGM => AV_CODEC_ID_AGM,
+            #[cfg(feature = "ffmpeg4")]
+            Id::LSCR => AV_CODEC_ID_LSCR,
+            #[cfg(feature = "ffmpeg4")]
+            Id::VP4 => AV_CODEC_ID_VP4,
+            #[cfg(feature = "ffmpeg4")]
+            Id::IMM5 => AV_CODEC_ID_IMM5,
+            #[cfg(feature = "ffmpeg4")]
+            Id::ADPCM_AGM => AV_CODEC_ID_ADPCM_AGM,
+            #[cfg(feature = "ffmpeg4")]
+            Id::HCOM => AV_CODEC_ID_HCOM,
+            #[cfg(feature = "ffmpeg4")]
+            Id::ARIB_CAPTION => AV_CODEC_ID_ARIB_CAPTION,
         }
     }
 }

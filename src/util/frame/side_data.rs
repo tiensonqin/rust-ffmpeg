@@ -34,6 +34,10 @@ pub enum Type {
     QPTableData,
     #[cfg(feature = "ffmpeg4")]
     S12MTimecode,
+    #[cfg(feature = "ffmpeg4")]
+    DynamicHdrPlus,
+    #[cfg(feature = "ffmpeg4")]
+    RegionsOfInterest,
 }
 
 impl Type {
@@ -73,6 +77,10 @@ impl From<AVFrameSideDataType> for Type {
             AV_FRAME_DATA_QP_TABLE_DATA => Type::QPTableData,
             #[cfg(feature = "ffmpeg4")]
             AV_FRAME_DATA_S12M_TIMECODE => Type::S12MTimecode,
+            #[cfg(feature = "ffmpeg4")]
+            AV_FRAME_DATA_DYNAMIC_HDR_PLUS => Type::DynamicHdrPlus,
+            #[cfg(feature = "ffmpeg4")]
+            AV_FRAME_DATA_REGIONS_OF_INTEREST => Type::RegionsOfInterest,
         }
     }
 }
@@ -105,6 +113,10 @@ impl Into<AVFrameSideDataType> for Type {
             Type::QPTableData => AV_FRAME_DATA_QP_TABLE_DATA,
             #[cfg(feature = "ffmpeg4")]
             Type::S12MTimecode => AV_FRAME_DATA_S12M_TIMECODE,
+            #[cfg(feature = "ffmpeg4")]
+            Type::DynamicHdrPlus => AV_FRAME_DATA_DYNAMIC_HDR_PLUS,
+            #[cfg(feature = "ffmpeg4")]
+            Type::RegionsOfInterest => AV_FRAME_DATA_REGIONS_OF_INTEREST,
         }
     }
 }

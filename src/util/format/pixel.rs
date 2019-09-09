@@ -321,6 +321,18 @@ pub enum Pixel {
     GRAYF32BE,
     #[cfg(feature = "ffmpeg4")]
     GRAYF32LE,
+    #[cfg(feature = "ffmpeg4")]
+    YUVA422P12BE,
+    #[cfg(feature = "ffmpeg4")]
+    YUVA422P12LE,
+    #[cfg(feature = "ffmpeg4")]
+    YUVA444P12BE,
+    #[cfg(feature = "ffmpeg4")]
+    YUVA444P12LE,
+    #[cfg(feature = "ffmpeg4")]
+    NV24,
+    #[cfg(feature = "ffmpeg4")]
+    NV42,
 }
 
 #[derive(Clone, Copy, PartialEq, Eq)]
@@ -613,6 +625,18 @@ impl From<AVPixelFormat> for Pixel {
             AV_PIX_FMT_GRAYF32BE => Pixel::GRAYF32BE,
             #[cfg(feature = "ffmpeg4")]
             AV_PIX_FMT_GRAYF32LE => Pixel::GRAYF32LE,
+            #[cfg(feature = "ffmpeg4")]
+            AV_PIX_FMT_YUVA422P12BE => Pixel::YUVA422P12BE,
+            #[cfg(feature = "ffmpeg4")]
+            AV_PIX_FMT_YUVA422P12LE => Pixel::YUVA422P12LE,
+            #[cfg(feature = "ffmpeg4")]
+            AV_PIX_FMT_YUVA444P12BE => Pixel::YUVA444P12BE,
+            #[cfg(feature = "ffmpeg4")]
+            AV_PIX_FMT_YUVA444P12LE => Pixel::YUVA444P12LE,
+            #[cfg(feature = "ffmpeg4")]
+            AV_PIX_FMT_NV24 => Pixel::NV24,
+            #[cfg(feature = "ffmpeg4")]
+            AV_PIX_FMT_NV42 => Pixel::NV42,
         }
     }
 }
@@ -934,6 +958,18 @@ impl Into<AVPixelFormat> for Pixel {
             Pixel::GRAYF32BE  => AV_PIX_FMT_GRAYF32BE,
             #[cfg(feature = "ffmpeg4")]
             Pixel::GRAYF32LE  => AV_PIX_FMT_GRAYF32LE,
+            #[cfg(feature = "ffmpeg4")]
+            Pixel::YUVA422P12BE => AV_PIX_FMT_YUVA422P12BE,
+            #[cfg(feature = "ffmpeg4")]
+            Pixel::YUVA422P12LE => AV_PIX_FMT_YUVA422P12LE,
+            #[cfg(feature = "ffmpeg4")]
+            Pixel::YUVA444P12BE => AV_PIX_FMT_YUVA444P12BE,
+            #[cfg(feature = "ffmpeg4")]
+            Pixel::YUVA444P12LE => AV_PIX_FMT_YUVA444P12LE,
+            #[cfg(feature = "ffmpeg4")]
+            Pixel::NV24 => AV_PIX_FMT_NV24,
+            #[cfg(feature = "ffmpeg4")]
+            Pixel::NV42 => AV_PIX_FMT_NV42,
         }
     }
 }
